@@ -2250,8 +2250,8 @@ Initialize |hmac| to an HMAC API using |hmacKey|. The HMAC uses the same hash
 algorithm used in the signature algorithm, i.e., SHA-256 for a P-256 curve.
             </li>
             <li>
-Initialize |labelMapFactoryFunction| to the result of calling the
-|createHmacIdLabelMapFunction| algorithm passing |hmac|.
+Initialize |labelMapFactoryFunction| to the result of calling the algorithm of
+section [[[#createhmacidlabelmapfunction]]] passing |hmac|.
             </li>
             <li>
 Initialize |combinedPointers| to the concatenation of |mandatoryPointers|
@@ -2322,8 +2322,8 @@ Increment |index|.
               </ol>
             </li>
             <li>
-Initialize |revealDocument| to the result of the "selectJsonLd"
-algorithm, passing |document|, and |combinedPointers| as |pointers|.
+Initialize |revealDocument| to the result of the algorithm in Section
+[[[#selectjsonld]]], passing |document|, and |combinedPointers| as |pointers|.
             </li>
             <li>
 Run the RDF Dataset Canonicalization Algorithm [[RDF-CANON]] on
@@ -2536,12 +2536,13 @@ object returned when calling the algorithm in Section
 [[[#parsederivedproofvalue]]], passing |proofValue| from |proof|.
             </li>
             <li>
-Initialize |labelMapFactoryFunction| to the result of calling the
-"createLabelMapFunction" algorithm.
+Initialize |labelMapFactoryFunction| to the result of calling the algorithm of
+Section [[[#createlabelmapfunction]]].
             </li>
             <li>
-Initialize |nquads| to the result of calling the "labelReplacementCanonicalize"
-algorithm, passing |document|, |labelMapFactoryFunction|, and any custom
+Initialize |nquads| to the result of calling the algorithm of section
+[[[#labelreplacementcanonicalizejsonld]]] passing |document|,
+|labelMapFactoryFunction|, and any custom
 JSON-LD API options. Note: This step transforms the document into an array of
 canonical N-Quads with pseudorandom blank node identifiers based on |labelMap|.
             </li>
@@ -2669,8 +2670,8 @@ function, i.e., SHA-256 for a P-256 curve. Per the recommendations of
 this is 256 bits or 32 bytes.
             </li>
             <li>
-Initialize |labelMapFactoryFunction| to the result of calling the
-|createHmacIdLabelMapFunction| algorithm passing |hmac|.
+Initialize |labelMapFactoryFunction| to the result of calling the algorithm of
+Section [[[#createhmacidlabelmapfunction]]] passing |hmac|.
             </li>
             <li>
 Initialize |groupDefinitions| to a map with an entry with a key of the string
